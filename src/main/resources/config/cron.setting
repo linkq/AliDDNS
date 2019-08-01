@@ -1,0 +1,3 @@
+#设置任务执行间隔目前设置时5分钟检查更新一次
+[xyz.linkq.AliDDNS]
+Update.update=*/5 * * * *

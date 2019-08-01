@@ -1,0 +1,8 @@
+#配置域名信息，必须是二级域名
+Domain = nas.linkq.xyz
+
+#阿里云账户的accessKeyId
+accessKeyId = 这里配置accessKeyId
+
+#阿里云账户的accessSecret
+accessSecret = 这里配置accessSecret
