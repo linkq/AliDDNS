@@ -1,2 +1,20 @@
 /target/
 /.settings/
+/.idea/
+
+## ide
+**/.idea
+*.iml
+
+## backend
+**/target
+**/logs
+
+## front
+**/*.lock
+
+.metadata
+.settings
+.classpath
+.factorypath
+.project
