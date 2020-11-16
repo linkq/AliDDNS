@@ -1,12 +1,11 @@
 package xyz.linkq.AliDDNS;
 
-import java.text.SimpleDateFormat;
-import java.util.List;
-
-import com.aliyuncs.alidns.model.v20150109.DescribeDomainRecordsResponse.Record;
-
 import cn.hutool.core.date.DateTime;
 import cn.hutool.setting.Setting;
+import com.aliyuncs.alidns.model.v20150109.DescribeDomainRecordsResponse.Record;
+
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
 * @author linkq 
@@ -17,6 +16,8 @@ public class Update {
 		System.out.println(new SimpleDateFormat("[yyyy-MM-dd:HH-mm-ss] ").format(new DateTime())+"开始执行任务：更新DNS解析！");
     	Setting setting = new Setting("config/ini.setting");
     	String domain=setting.getStr("Domain");
+
+    	//获取当前域名解析记录
     	DescribeDomainRecords describeDomainRecords = new DescribeDomainRecords();
     	List<Record> records = describeDomainRecords.getRecord(domain);
         OutIP ip = new OutIP();

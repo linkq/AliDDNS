@@ -1,11 +1,12 @@
 package xyz.linkq.AliDDNS;
 
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.http.HttpUtil;
+
 import java.text.SimpleDateFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import cn.hutool.core.date.DateTime;
-import cn.hutool.http.HttpUtil;
 
 /**
 * @author linkq 
@@ -24,6 +25,9 @@ public class OutIP {
 			ip = m.group();
 			System.out.println(new SimpleDateFormat("[yyyy-MM-dd:HH-mm-ss] ").format(new DateTime())+"获取到本机外网IP为："+ip);
 			break;//   加break则提取string中的一个IP
+		}
+		if (StrUtil.isBlank(ip)) {
+			ip ="0.0.0.0";
 		}
 		return ip;
 	}
